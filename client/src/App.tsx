@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {io,Socket} from 'socket.io-client';
 import './style.css';
-const API=import.meta.env.VITE_API||'http://localhost:3001';
+const API=import.meta.env.VITE_API||'';
 const socket:Socket=io(API,{autoConnect:false});
 const skins:any={default:['Default',0,'🔢'],neon:['Neon',2500,'🟣'],fire:['Fire',5000,'🔥'],ice:['Ice',7500,'❄️'],electric:['Electric',10000,'⚡'],rainbow:['Rainbow',25000,'🌈'],diamond:['Diamond',50000,'💎'],galaxy:['Galaxy',100000,'🌌']};
 type User={username:string;coins:number;wins:number;games:number;losses:number;level:number;xp:number;inventory:string[];equipped:string};
